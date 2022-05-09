@@ -5,7 +5,7 @@ describe('Given function includes', () => {
         test('Then should TypeError', () => {
             const values = [];
             expect(() => includes()).toThrow(
-                TypeError('Reduce of empty array with no initial value')
+                TypeError('Includes of empty array with no initial value')
             );
         });
     });

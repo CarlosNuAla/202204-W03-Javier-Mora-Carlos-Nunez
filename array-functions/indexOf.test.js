@@ -5,7 +5,7 @@ describe('Given function indexOf', () => {
         test('Then should TypeError', () => {
             const values = [];
             expect(() => indexOf(...values)).toThrow(
-                TypeError('Reduce of empty array with no initial value')
+                TypeError('IndexOf of empty array with no initial value')
             );
         });
     });

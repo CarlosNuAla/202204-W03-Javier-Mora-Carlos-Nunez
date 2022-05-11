@@ -1,9 +1,15 @@
 export const push = (array = [], ...value) => {
     if (!Array.isArray(array)) {
+        if (array === null) {
+            throw new TypeError('array parameter must be an array');
+        }
         throw new TypeError('array parameter must be an array');
     }
-    for (let item of value) {
-        array[array.length] = item;
+    if (array.length === 0) {
+        throw new TypeError('Push of empty array with no initial value');
+    }
+    for (let i = 0; i < value.length; i++) {
+        array[array.length] = value;
     }
     return array.length;
 };

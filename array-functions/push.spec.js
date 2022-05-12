@@ -10,6 +10,15 @@ describe('Given a function push', () => {
         })
     })
 
+    describe('When first element hasnt value', () => {
+        test('Then should second element', () => {
+            const values = [, [4]];
+            const expectedResult = 1;
+            const result = push(...values);
+            expect(result).toBe(expectedResult);
+        })
+    })
+
     describe('When receive null', () => {
         test('Then should TypeError', () => {
             const values = [null];
